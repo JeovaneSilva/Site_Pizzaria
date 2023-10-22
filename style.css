@@ -244,7 +244,6 @@ header.rolagem{
     flex-direction: column;
     align-items: center;
     background-color:white;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.75);
 }
 
 .cardapio h2{
@@ -329,7 +328,7 @@ header.rolagem{
     border-radius: 5px;
     text-transform: uppercase;
     cursor: pointer;
-    color: black;
+    color: white;
     transition: all 200ms ease-in;
     border: none;
     font-family: 'Roboto', sans-serif;
@@ -373,80 +372,95 @@ header.rolagem{
     gap: 130px;
 }
 
-/*Contatos*/
+/* footer */
 
-.lista-contatos, .logo-contatos{
-    display: none;
+footer{
+    width: 100vw;
+    color: white;
+    background-color: #212529;
+    font-family: 'Roboto';
 }
 
 .contatos{
-    width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    font-size: 1rem;
+    text-decoration: none;
+    color: #6c757d;
+    padding-top: 3em;
+}
+
+.contatos span{
     color: white;
-}
-
-.contatos h3{
-    font-size: 3.5rem;  
-    font-family: 'Merienda', sans-serif;
-    font-weight: 500;
-    text-align: center;
-}
-
-.contatos-secao{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    flex-direction: column;
-    color: black;
-    margin: 30px 0;
-}
-
-.contatos-secao .cont{
-    margin: 1.5em 0 1em 0;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 200px;
-}
-
-.icone{
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.icone i{
-    text-align: center;
+    text-transform: uppercase;
     font-weight: bold;
-    font-size: 50px;
+} 
+
+.contatos ul li{
+    list-style-type: none;
+    padding-top: 0.5em;
 }
 
-.icone span{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+.contatos ul li a{
+    text-decoration: none;
+    color: #6c757d;
 }
 
-.contatos-secao .cont .icone:hover{
+.contatos ul li a:hover{
     color: #168616;
 }
 
-/*Footer*/
+.contatos_suporty ul li a i{
+    padding-right: 5px;
+}
 
-footer{
-    height: 30px;
-    color: black;
-    font-size: 1.3rem;
+.footer-bottom{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(192, 193, 193);
+    padding-top: 5em;
+    padding-bottom: 2em;
+}
+
+.footer-bottom h3{
+    font-size: 15px;
+    padding-left: 2.5em;
+}
+
+.footer-bottom .icones-footer{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-bottom .icones-footer .icones{
+    border-radius: 50%;
+    background-color: black;
     padding: 10px;
 }
+
+.footer-bottom .icones-footer .icones i{
+    color: white;
+}
+
+.footer-bottom .icones-footer .icones i:hover{
+    color: #168616;
+}
+
+.footer-bottom .terms{
+    display: flex;
+    list-style-type: none;
+    padding-right: 2em;
+    gap: 10px;
+}
+
+.footer-bottom .terms li a{
+   text-decoration: none;
+   color: #6c757d;
+}
+
+.footer-bottom .terms li a:hover{
+    color: #168616;
+ }
 
 @media (max-width: 1200px) {
 
@@ -540,18 +554,6 @@ footer{
 
     .btn-cardapio button{
         width: 190px;
-    }
-
-    .contatos .contatos-secao .cont{
-        gap: 60px;
-    }
-
-    .contatos h3{
-        font-size: 3rem;
-    }
-
-    footer{
-        font-size: 15px;
     }
 }
 
@@ -718,28 +720,52 @@ footer{
         width: 400px;
     }
 
-    .contatos h3{
-        font-size: 2rem;
+    .contatos{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
 
-    .icone i{
+    .contatos div{
+        padding-top: 2.5em;
+    }
+
+    .contatos span{
         font-size: 30px;
     }
+
+    .contatos ul li{
+        font-size: 20px;
+    }
+
+    .footer-bottom{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-bottom h3{
+        padding-left: 0;
+        font-size: 20px;
+    }
+
+    .footer-bottom .icones-footer .icones {
+        width: 70px;
+        height: 70px;
+        padding: 0;
+    }
+
+    .footer-bottom .icones-footer .icones a{
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        margin-top: 17px;
+    }
+
+    .footer-bottom .terms{
+        padding-right: 0;
+        font-size: 20px;
+    }
     
-    .icone span{
-       font-size: 20px;
-    }
-
-    .contatos img{
-        height: 200px;
-    }
-
-    footer{
-        font-size: 13px;
-        background-color: rgb(192, 193, 193);
-        padding: 5px;
-    }
-
 }
 
 @media (max-width: 550px){
@@ -795,107 +821,6 @@ footer{
     .cardapio h2{
         font-size: 2em;
     }
-
-    .contato-footer{
-        width: 100vw;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .contatos{
-        height: 160px;
-    }
-
-    .lista-contatos, .logo-contatos{
-        display: block;
-    }
-
-    .logo-contatos{
-        display: flex;
-    }
-
-    .logo-contatos img{
-        width: 35px;
-        height: 30px;
-    }
-
-    .contatos .contatos-secao .contato-footer .logo-contatos h3{
-        font-size: 13px;
-        padding-top: 8px;
-        display: block;
-    }
-
-    .lista-contatos{
-        height: 120px;
-        margin-top: 15px;
-    }
-
-    .lista-contatos ul li{
-        list-style: none;
-        height: 30px;
-        display: flex;
-    }
-
-    .lista-contatos ul li a{
-        text-decoration: none;
-        color: black;
-        font-size: 10px;
-        font-weight: bold;
-        font-family: 'Roboto';
-    }
-
-    .contatos .contatos-secao{
-        width: 100vw;
-    }
-
-    .contatos .contatos-secao .cont{
-        display: flex;
-        padding: 0;
-        margin: 0;
-        gap: 0px;
-    }
-
-    .contatos .contatos-secao .cont .icone{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 300px;
-        gap: 0px;
-    }
-
-    .contatos .contatos-secao h3{
-        font-size: 1.8rem;
-        margin: 0;
-        display: none;
-    }
-
-    .cont{
-        width: 50px;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height: 100px;
-        margin: 0;
-    }
-
-    .contatos .contatos-secao .contato-footer .cont .icone{
-        width: 20px;
-        padding-top: 10px;
-    }
-
-    .icone i{
-        font-size: 20px;
-    }
-    
-    .icone span{
-       display: none;
-    }
-
-    footer{
-        font-size: 8px;
-        height: 15px;
-    }
-
 }
 
 @media (max-width: 450px){
@@ -956,4 +881,34 @@ footer{
         width: 150px;
         font-size: 10px;
     }
+
+    .contatos span{
+        font-size: 20px;
+    }
+
+    .contatos ul li{
+        font-size: 15px;
+    }
+
+    
+    .footer-bottom h3{
+        font-size: 20px;
+    }
+
+    .footer-bottom .icones-footer .icones {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-bottom .icones-footer .icones a{
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .footer-bottom .terms{
+        padding-right: 0;
+        font-size: 20px;
+    }
+    
+
 }
