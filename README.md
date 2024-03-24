@@ -58,8 +58,3 @@
 
 <li>Inspiração: <a href="https://youtu.be/Uxm17PTHAZw?si=bpv0OZSiHTNs-2xH" target="_blank">CrisTech.</a></li>
 </ul>
-
-
-
-
-<!--https://dev.to/envoy_/150-badges-for-github-pnk--!>
