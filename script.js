@@ -1,3 +1,9 @@
+const AnoAtual = document.querySelector(".AnoAtual")
+
+const ano = new Date()
+
+AnoAtual.innerHTML= ano.getFullYear()
+
 
 window.addEventListener('scroll', function(){
     let header = document.querySelector('#header')
