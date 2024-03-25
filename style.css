@@ -7,6 +7,12 @@
     box-sizing: border-box;
 }
 
+/*  
+    Azul : #01547b
+    Azul-escuro:#02364e
+    Amarelo: #FFD737
+*/
+
 html{
     overflow-x: hidden;
     width: 100vw;
@@ -16,24 +22,18 @@ body{
     width: 100vw;
 }
 
-.container{
-    max-width: 1280px;
-    margin: auto;
-}
-
-.flex{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 /*header*/
 
 header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100vw;
     padding: 0 4%;
     position: fixed;
     transition: 0.5s;
+    background-color: #01547b;
+    height: 60px;
 }
 
 header img{
@@ -54,13 +54,28 @@ header img{
     font-weight: 400;
 }
 
+nav{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header ul{
     list-style-type: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header ul li{
     display: inline-block;
-    margin: 0px 15px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
 header ul li a{
@@ -72,29 +87,13 @@ header ul li a{
     transition: all 200ms ease-in;
 }
 
-header ul li a:hover{
-    color: #ffc506;
+header ul li a i{
+    font-size: 25px;
 }
 
-header.rolagem{
-    width: 100vw;
-    background-color: #3F903F;
-    height: 60px;
-}
-
-.icon-nav{
-    background-color: #FFD737;
-    padding: 7px;
-    border-radius: 20px;
-}
-
-.icon-nav .icones-nav i{
-    color: black;
-    font-weight: bold;
-}
-
-.icon-nav .icones-nav i:hover{
-    color:white;
+header ul li:hover{
+    background-color: #02364e;
+    transition: .7s;
 }
 
 .menu-toggle{
@@ -172,7 +171,7 @@ header.rolagem{
 /*Sobre-nos*/
 
 .sobre-nos{
-    background-color: #3F903F;
+    background-color: #02364e;
     width: 100vw;
     color: white;
     display: flex;
@@ -208,19 +207,20 @@ header.rolagem{
     width: 200px;
     height: 50px;
     border-radius: 15px;
-    border: 2px solid #FFD737;
-    background-color: transparent;
-    color: #FFD737;
+    background-color: #01547b;
+    border: none;
+    color: white;
     font-size: 15px;
     font-family: 'Roboto';
     font-weight: bold;
     text-transform: uppercase;
+
+    transition: all 400ms ease-in;
 }
 
 .contentsobre .btn-reservar-about:hover{
-    background-color: white;
-    color: #3F903F;
-    border: none;
+    background-color: transparent;
+    border: 2px solid #01547b;
 }
 
 .btn-reservar-about-mobile{
@@ -324,7 +324,7 @@ header.rolagem{
     width: 110px;
     height: 30px;
     margin-top: 0.3rem;
-    background-color: #3F903F;
+    background-color: #01547b;
     border-radius: 5px;
     text-transform: uppercase;
     cursor: pointer;
@@ -336,9 +336,9 @@ header.rolagem{
 }
 
 .itens-cardapio .info .pedir:hover{
-    border: 1.5px solid black;
+    border: 1.5px solid #01547b;
     background-color: transparent;
-    color: #168616;
+    color: #01547b;
 }
 
 .btn-cardapio button{
@@ -360,9 +360,9 @@ header.rolagem{
 }
 
 .btn-cardapio button:hover{
-    border: 2px solid #168616;
+    border: 2px solid #01547b;
     background-color: transparent;
-    color: #168616;
+    color: #01547b;
 }
 
 .btn-cardapio{
@@ -407,7 +407,7 @@ footer{
 }
 
 .contatos ul li a:hover{
-    color: #168616;
+    color: #01547b;
 }
 
 .contatos_suporty ul li a i{
@@ -443,7 +443,7 @@ footer{
 }
 
 .footer-bottom .icones-footer .icones i:hover{
-    color: #168616;
+    color: #01547b;
 }
 
 .footer-bottom .terms{
@@ -459,7 +459,7 @@ footer{
 }
 
 .footer-bottom .terms li a:hover{
-    color: #168616;
+    color: #01547b;
  }
 
 @media (max-width: 1200px) {
@@ -507,20 +507,21 @@ footer{
         width: 200px;
         height: 50px;
         border-radius: 15px;
-        border: 2px solid #FFD737;
-        background-color: transparent;
-        color: #FFD737;
+        background-color: #01547b;
+        color: white;
+        border: none;
         font-size: 15px;
         font-family: 'Roboto';
         font-weight: bold;
         text-transform: uppercase;
         margin: 4em 0;
+
+        transition: all 400ms ease-in;
     }
     
     .btn-reservar-about-mobile:hover{
-        background-color: white;
-        color: #3F903F;
-        border: none;
+        background-color: transparent;
+        border: 2px solid #01547b;
     }
 
     .itens-cardapio{
@@ -564,8 +565,17 @@ footer{
         height: 60px;
     }
 
-    #header ul{
+    nav{
+        height: auto;
+    }
+    
+    header ul{
         display: none;
+        height: auto;
+    }
+    
+    header ul li{
+        height: auto;
     }
 
     .one,.two,.three{
@@ -592,14 +602,7 @@ footer{
         padding: 0;
     }
 
-    #header.on .icon-nav i{
-        color: white;
-    }
 
-    #header.on .icon-nav i:hover{
-       color: #ffc506; 
-    }
-    
     #header.on{
         position: fixed;
         top: 0;
@@ -636,12 +639,22 @@ footer{
     #header.on ul li{
         display: flex;
         justify-content: center;
-        padding-top: 30px;
+        padding: 10px;
+    }
+
+    #header.on ul li:hover{
+      background-color: transparent;
     }
 
     #header.on ul li a{
         font-size: 1.3rem;
     }
+
+    #header.on ul li a:hover{
+        color: #01547b;
+    }
+
+    
 
     #header.on .menu-toggle .two{
         opacity: 0;
